@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Splash Screen</title>
+
+<style>
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+    text-align:center;
+    background:#f2f2f2;
+}
+
+/* SPLASH */
+.splash-screen{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    padding:20px;
+}
+
+/* IMAGEN */
+.splash-screen img{
+    width:60%;
+    max-width:250px;
+    height:auto;
+    margin-bottom:20px;
+}
+
+/* TEXTO */
+h2{
+    font-size:22px;
+}
+
+/* FOOTER */
+.subtitulo{
+    position:fixed;
+    bottom:10px;
+    right:20px;
+    font-size:14px;
+    font-style:italic;
+    user-select:none;
+}
+
+/* 📱 CELULAR */
+@media (max-width:600px){
+
+    .splash-screen img{
+        width:80%;
+        max-width:180px;
+    }
+
+    h2{
+        font-size:18px;
+    }
+
+    .subtitulo{
+        font-size:12px;
+        right:10px;
+    }
+}
+
+/* 📲 TABLET */
+@media (min-width:601px) and (max-width:1024px){
+
+    .splash-screen img{
+        max-width:220px;
+    }
+}
+</style>
+
+</head>
+
+<body>
+
+<div id="splash-screen" class="splash-screen">
+    <img src="Valnail.png" alt="Logo">
+    <h2>Cargando...</h2>
+</div>
+
+<script>
+setTimeout(function(){
+    window.location.href = "login.php";
+}, 4000);
+</script>
+
+<div class="subtitulo">
+    ©️ 2026 ValNail - Vazquez Felix Ximena Valentina
+</div>
+
+</body>
+</html>

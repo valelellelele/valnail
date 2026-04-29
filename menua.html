@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<title>Menú Principal</title>
+<style>
+  body {
+    margin: 0;
+    font-family: serif;
+    background: #e6e6e6;
+  }
+
+  /* Header fijo */
+  header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #b8c9de;
+    display: flex;
+    align-items: center;
+    padding: 10px 30px;
+    box-sizing: border-box;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 1000;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .logo img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+  }
+
+  .logo h1 {
+    font-size: 24px;
+    margin: 0;
+    font-weight: bold;
+    color: #222;
+  }
+
+  main {
+    margin-top: 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  h2 {
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 40px;
+    color: #222;
+  }
+
+  /* Contenedor del menú desplegable */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropbtn {
+    background: #b8c9de;
+    border: none;
+    padding: 20px 40px;
+    border-radius: 25px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+
+  .dropbtn:hover {
+    background: #9aaac3;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #f9f9f9;
+    min-width: 220px;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    z-index: 1000;
+    text-align: center;
+    flex-direction: column;
+  }
+
+  .dropdown-content button {
+    background: #b8c9de;
+    border: none;
+    padding: 15px 20px;
+    margin: 5px 0;
+    width: 180px;
+    border-radius: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+
+  .dropdown-content button:hover {
+    background: #9aaac3;
+  }
+
+  /* Mostrar el menú al pasar el mouse */
+  .dropdown:hover .dropdown-content {
+    display: flex;
+  }
+
+  .subtitulo {
+    position: fixed;
+    bottom: 10px;
+    right: 20px;
+    font-size: 16px;
+    font-style: italic;
+    user-select: none;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">
+   <img src="logo.png" alt="Logo"> 
+    <h1>ValNail</h1>
+  </div>
+</header>
+
+<main>
+  <h2>Menú de Tablas</h2>
+  
+  <div class="dropdown">
+    <button class="dropbtn">Empresa ▼</button>
+    <div class="dropdown-content">
+      <button onclick="window.location.href='tablaEmpleados.php'">Empleados</button>
+      <button onclick="window.location.href='tablaProductos.php'">Productos</button>
+      <button onclick="window.location.href='tablaProveedores.php'">Proveedores</button>
+      <button onclick="window.location.href='tablaPedidos.php'">Pedidos</button>
+      <button onclick="window.location.href='tablaClientes.php'">Clientes</button>
+      <button onclick="window.location.href='tablaFacturas.php'">Facturas</button>
+    </div>
+  </div>
+
+</main>
+
+<div class="subtitulo">©️ 2026 ValNail - Vazquez Felix Ximena Valentina</div>
+
+</body>
+</html>
